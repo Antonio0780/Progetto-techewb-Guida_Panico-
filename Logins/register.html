@@ -1,1 +1,81 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrazione Ristorante</title>
+  <link rel="stylesheet" href="registerStiles.css">
+
+  <script>
+  // Attende il caricamento completo della pagina
+  document.addEventListener("DOMContentLoaded", function() {
+    const form = document.querySelector(".registerForm");
+    const password = document.getElementById("password");
+    const passwordConferma = document.getElementById("passwordConferma");
+
+    form.addEventListener("submit", function(event) {
+      // Se le password non coincidono, blocca l'invio e mostra un messaggio
+      if (password.value !== passwordConferma.value) {
+        event.preventDefault(); // blocca l'invio del form
+        alert("Le password non coincidono. Controlla e riprova.");
+        passwordConferma.focus();
+      }
+    });
+  });
+</script>
+
+</head>
+<body>
+  <div class="registerContainer">
+    <h2>Crea il tuo ristorante</h2>
+    <form class="registerForm" action="register.php" method="POST">
+
+  <div class="form-sections">
+    <!-- Sezione Ristorante -->
+    <div class="form-column">
+      <h3>Dati del ristorante</h3>
+
+      <label for="nomeRistorante">Nome del ristorante</label>
+      <input type="text" id="nomeRistorante" name="nomeRistorante" placeholder="Es. Trattoria Da Mario" required>
+
+      <label for="indirizzo">Indirizzo</label>
+      <input type="text" id="indirizzo" name="indirizzo" placeholder="Via Roma 12, Napoli" required>
+
+      <label for="telefono">Telefono</label>
+      <input type="tel" id="telefono" name="telefono" placeholder="081 1234567" required>
+
+      <label for="emailRistorante">Email del ristorante</label>
+      <input type="email" id="emailRistorante" name="emailRistorante" placeholder="info@trattoria.it" required>
+    </div>
+
+    <!-- Sezione Amministratore -->
+    <div class="form-column">
+      <h3>Dati dell’amministratore</h3>
+
+      <label for="nomeAdmin">Nome</label>
+      <input type="text" id="nomeAdmin" name="nomeAdmin" placeholder="Mario Rossi" required>
+
+      <label for="emailAdmin">Email</label>
+      <input type="email" id="emailAdmin" name="emailAdmin" placeholder="mario@esempio.com" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Crea una password" required>
+
+      <label for="passwordConferma">Conferma Password</label>
+      <input type="password" id="passwordConferma" name="passwordConferma" placeholder="Conferma password" required>
+
+
+    </div>
+  </div>
+
+  <button type="submit">Crea Ristorante</button>
+</form>
+
+
+    <div class="extra-links">
+      <p>Hai già un account? <a href="login.html">Accedi</a></p>
+    </div>
+  </div>
+</body>
+</html>
 
