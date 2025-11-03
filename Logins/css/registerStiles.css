@@ -1,0 +1,125 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("Images/backgroundLogin.png"); /* usa qui la tua immagine di sfondo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 0;
+}
+
+.registerContainer {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 40px 50px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 800px;
+  text-align: center;
+}
+
+.registerContainer h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.registerForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.registerForm label {
+  text-align: left;
+  font-weight: bold;
+  color: #555;
+}
+
+.registerForm input[type="text"],
+.registerForm input[type="email"],
+.registerForm input[type="tel"],
+.registerForm input[type="password"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.registerForm input:focus {
+  border-color: #4f46e5;
+}
+
+.registerForm button {
+  background-color: #4f46e5;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: bold;
+}
+
+.registerForm button:hover {
+  background-color: #4338ca;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 15px 0;
+}
+
+.extra-links {
+  margin-top: 15px;
+  font-size: 0.9em;
+}
+
+.extra-links a {
+  color: #4f46e5;
+  text-decoration: none;
+}
+
+.extra-links a:hover {
+  text-decoration: underline;
+}
+
+.form-sections {
+  display: flex;              /* affianca le due sezioni */
+  justify-content: space-between;
+  gap: 30px;                  /* spazio tra le due colonne */
+}
+
+.form-column {
+  flex: 1;                    /* le rende larghe uguali */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-column h3 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Adattamento per schermi piccoli */
+@media (max-width: 768px) {
+  .form-sections {
+    flex-direction: column;   /* sotto l’altra su mobile */
+  }
+}
