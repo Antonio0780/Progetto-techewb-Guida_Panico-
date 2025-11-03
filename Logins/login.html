@@ -1,1 +1,27 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+   <link rel="stylesheet" href="loginStiles.css"></head>
+<body>
+  <div class="loginContainer">
+    <h2>Accedi</h2>
+    <form class="loginForm" action="login.php" method="POST">
+      <label for="username">Email o Username</label>
+      <input type="text" id="username" name="username" placeholder="Inserisci email o username" required>
 
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Inserisci password" required>
+
+      <button type="submit">Login</button>
+    </form>
+
+    <div class="extra-links">
+      <p><a href="#">Password dimenticata?</a></p>
+      <p>Non hai un account? <a href="#">Registrati</a></p>
+    </div>
+  </div>
+</body>
+</html>
