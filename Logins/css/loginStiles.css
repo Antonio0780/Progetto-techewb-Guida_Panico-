@@ -1,1 +1,81 @@
 
+body {
+      font-family: Arial, sans-serif;
+      background-image: url(Images/backgroundLogin.png);
+      background-size: cover;       /* adatta l’immagine a tutto lo schermo */
+      background-position: center;  /* centra l’immagine */
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .loginContainer {
+      background-color: #fff;
+      padding: 40px 50px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      width: 320px;
+      text-align: center;
+    }
+
+    .loginContainer h2 {
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    .loginForm {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .loginForm label {
+      text-align: left;
+      font-weight: bold;
+      color: #555;
+    }
+
+    .loginForm input[type="text"],
+    .loginForm input[type="password"] {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    .loginForm input:focus {
+      border-color: #4f46e5;
+    }
+
+    .loginForm button {
+      background-color: #4f46e5;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      font-weight: bold;
+    }
+
+    .loginForm button:hover {
+      background-color: #4338ca;
+    }
+
+    .extra-links {
+      margin-top: 15px;
+      font-size: 0.9em;
+    }
+
+    .extra-links a {
+      color: #4f46e5;
+      text-decoration: none;
+    }
+
+    .extra-links a:hover {
+      text-decoration: underline;
+    }
